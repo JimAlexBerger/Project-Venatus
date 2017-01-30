@@ -12,11 +12,6 @@ public class MainFrame extends JFrame {
 	private JPanel contentPane;
 
 	/**
-	 * Launch the application.
-	 */
-	
-
-	/**
 	 * Create the frame.
 	 */
 	public MainFrame() {
