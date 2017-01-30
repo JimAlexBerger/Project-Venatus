@@ -11,6 +11,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.Color;
+import scene.*;
 
 public class MainFrame extends JFrame {
 
@@ -20,9 +22,12 @@ public class MainFrame extends JFrame {
 	 * Create the frame.
 	 */
 	public MainFrame() {
+		setTitle("Menu");
+		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 400, 310);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -32,6 +37,9 @@ public class MainFrame extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				//play game function
+				Scene frame = new Scene();
+				frame.setVisible(true);
+				
 			}
 		});
 		btnPlayGame.setBounds(100, 15, 200, 50);
@@ -49,7 +57,7 @@ public class MainFrame extends JFrame {
 		JButton btnCredits = new JButton("Credits");
 		btnCredits.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent arg0) {
-				//Option function
+				//Credits function
 			}
 		});
 		btnCredits.setBounds(100, 137, 200, 50);
