@@ -12,6 +12,7 @@ public class Main {
 		frame.setVisible(true);
 		
 		Player tim = new Player();
+		System.out.println(tim.x);
 	}
 
 }
